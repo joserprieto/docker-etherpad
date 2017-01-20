@@ -1,11 +1,29 @@
 # What is Etherpad?
 
+Etherpad is a really-real time collaborative editor maintained by the Etherpad Community.
 
-%%LOGO%%
+Etherpad is written in JavaScript (99.9%) on both the server and client so it's easy for developers to maintain and add new features.  Because of this Etherpad has tons of customizations that you can leverage.
+
+Etherpad is designed to be easily embeddable and provides a [HTTP API](https://github.com/ether/etherpad-lite/wiki/HTTP-API)
+that allows your web application to manage pads, users and groups. It is recommended to use the [available client implementations](https://github.com/ether/etherpad-lite/wiki/HTTP-API-client-libraries) in order to interact with this API.
+
+There is also a [jQuery plugin](https://github.com/ether/etherpad-lite-jquery-plugin) that helps you to embed Pads into your website.
+
+There's also a full-featured plugin framework, allowing you to easily add your own features.  By default your Etherpad is rather sparse and because Etherpad takes a lot of it's inspiration from Wordpress plugins are really easy to install and update.  Once you have Etherpad installed you should visit the plugin page and take control.
+
+Finally, Etherpad comes with translations into most languages!  Users are automatically delivered the correct language for their local settings.
+
+
+**Visit [beta.etherpad.org](http://beta.etherpad.org) to test it live.**
+
+Also, check out the **[FAQ](https://github.com/ether/etherpad-lite/wiki/FAQ)**, really!
+
+<!--%%LOGO%%-->
+![logo](./logo.png)
 
 # About this image
 
-
+Docker image for Etherpad Lite collaborative text editor, with support for locale and timezone, before build the image.
 
 But add extra support for configure timezone and locales before built the image, with the arguments in 
 the `docker build` command (`--build-arg`), and `ARG` in the `Dockerfile`.
@@ -100,12 +118,6 @@ This image includes `EXPOSE 5432` (the postgres port), so standard container lin
 
 > The postgres database is a default database meant for use by users, utilities and third party applications.
 > [postgresql.org/docs](http://www.postgresql.org/docs/9.5/interactive/app-initdb.html)
-
-## connect to it from an application
-
-```console
-$ docker run --name some-app --link some-postgres:postgres -d application-that-uses-postgres
-```
 
 
 ## Environment Variables

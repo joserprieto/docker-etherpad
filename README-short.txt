@@ -1,1 +1,1 @@
-Docker Image for PostgreSQL object-relational database, with support for locale and timezone, before build the image. 
+Docker image for Etherpad Lite collaborative text editor, with support for locale and timezone, before build the image.
